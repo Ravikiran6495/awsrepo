@@ -15,6 +15,11 @@ public class StudentController {
 		return "ram";
 	}
 	
+	@GetMapping("welcome")
+	public String welcome() {
+		return "welcome to aws";
+	}
+	
 	@PostMapping("add")
 	public int addition(@RequestBody Request request) {
 		System.out.println(request);
