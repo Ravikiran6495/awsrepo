@@ -15,7 +15,7 @@ public class StudentController {
 		return "ram";
 	}
 	
-	@GetMapping("welcome")
+	@GetMapping("welcome1")
 	public String welcome() {
 		return "welcome to aws";
 	}
