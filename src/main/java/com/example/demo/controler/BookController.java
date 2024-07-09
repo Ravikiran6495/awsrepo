@@ -27,6 +27,11 @@ public class BookController {
 		return bookServiceImpl.getAllBooks();
 	}
 
+	@GetMapping("/welcome")
+	public String getMessage() {
+		return "Welcome to AWS";
+	}
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<Book> getBookById(@PathVariable Long id) {
 		Optional<Book> book = bookServiceImpl.getBookById(id);
