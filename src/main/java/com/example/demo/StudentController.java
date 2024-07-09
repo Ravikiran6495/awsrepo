@@ -20,9 +20,5 @@ public class StudentController {
 		return "welcome to aws";
 	}
 	
-	@PostMapping("add")
-	public int addition(@RequestBody Request request) {
-		System.out.println(request);
-		return request.getNum1()+request.getNum2();
-	}
+	
 }
