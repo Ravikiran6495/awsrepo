@@ -1,12 +1,6 @@
-# Use an official OpenJDK runtime as a parent image
-FROM openjdk:17-jdk-alpine
-
-
-# Expose the port the application runs on
-EXPOSE 8088
-
-# Copy the executable JAR file to the container
-COPY target/springboot-aws-deploy.jar springboot-aws-deploy.jar
-
-# Run the application
-ENTRYPOINT ["java", "-jar", "springboot-aws-deploy.jar"]
+FROM eclipse-temurin:17-jdk-alpine
+RUN apk add curl
+VOLUME /tmp
+EXPOSE 8080
+ADD target/springboot-book.jar springboot-book.jar
+ENTRYPOINT ["java","-jar","/springboot-book.jar"]
